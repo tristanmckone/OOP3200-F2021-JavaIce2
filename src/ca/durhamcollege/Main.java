@@ -1,20 +1,27 @@
+/**
+ * @author Tristan Mckone
+ * @date 2021-11-15
+ */
 package ca.durhamcollege;
 import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args)
     {
+        // import scanner
         Scanner keyboard = new Scanner(System.in);
         String prompt = "";
 
+        // prompt for first point
         Vector2D point1 = new Vector2D();
         System.out.print("Enter the first point (x, y): ");
 
+        // split to get both values
         prompt = keyboard.nextLine();
         var values = prompt.split(",");
         point1.set(Float.parseFloat(values[0]), Float.parseFloat(values[1]));
 
-
+        // same to get second input
         System.out.println("\n--------------------------------------------------------------" );
         System.out.println("You Entered " + point1.toString() + " for the first point" );
         System.out.println("--------------------------------------------------------------\n" );
@@ -25,6 +32,7 @@ public class Main {
         values = prompt.split(",");
         point2.set(Float.parseFloat(values[0]), Float.parseFloat(values[1]));
 
+        // output values
         System.out.println("\n--------------------------------------------------------------" );
         System.out.println("You Entered " + point2.toString() + " for the second point" );
         System.out.println("--------------------------------------------------------------\n" );
